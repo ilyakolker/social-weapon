@@ -1,10 +1,10 @@
 {
     "image_url" : [
-       "./images/wp1.jpg" ,
-       "./images/wp2.jpg" ,
-       "./images/wp3.png" ,
-       "./images/wp4.jpg" ,
-       "./images/wp5.jpg" 
+       "wp1.jpg" ,
+       "wp2.jpg" ,
+       "wp3.png" ,
+       "wp4.jpg" ,
+       "wp5.jpg" 
        
     ] 
 }

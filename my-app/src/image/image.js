@@ -1,8 +1,11 @@
 import React from 'react';
 
+
 const Image = (props) =>{
     return (
-        <img src={props.image_url} />
+        <div className='imgbox'>
+           <img src={props.image_url} onClick={props.click} />
+        </div>
     )
 }
 
