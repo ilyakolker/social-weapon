@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import Image from './image/image'
+import Card from './itemCard/card'
+import Nav from './navbar/navbar'
 
 
 const images = require("./data/images.json")
+const cards = require("./data/cards.json")
+
+//console.log(data);
 class App extends Component {
   state = {
-    ims : images.image_url
+    ims : images.image_url,
+    cards : cards.cards
   }
   deletePersonHandler = (imgIndex) =>{
     const imgbox = [...this.state.ims];
@@ -21,10 +27,13 @@ class App extends Component {
     imgs = (
       <div>
         {this.state.ims.map((img_url,index) => {
-          return <Image 
+          return  <Card key={index} title={this.state.cards[index].title} desc={this.state.cards[index].desc} >
+                    <Image
+                    className="card-img-top"
                     image_url={require(`./images/${img_url}`) } 
-                    key={index} 
+                    
                     click={() => this.deletePersonHandler(index)}/>
+                    </Card>
         })}
       </div> 
     );
@@ -32,8 +41,11 @@ class App extends Component {
     
     return (
       <div className="App">
-      {console.log(this.state.ims)}
-       {imgs}
+      <div className="container-fluid">
+      <Nav/>
+      
+     {imgs}
+     </div>
       </div>
     );
   }

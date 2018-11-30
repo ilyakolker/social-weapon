@@ -364,8 +364,8 @@ module.exports = {
             loader: getStyleLoaders({
               importLoaders: 1,
               sourceMap: shouldUseSourceMap,
-              modules: true,
-              getLocalIdent: getCSSModuleLocalIdent,
+              // modules: true,
+              // getLocalIdent: getCSSModuleLocalIdent,
             }),
           },
           // Opt-in support for SASS. The logic here is somewhat similar
